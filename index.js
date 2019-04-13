@@ -190,6 +190,89 @@ const relics = [{
   addresses: [ 0x4da65f2, 0x662263a ],
 }]
 
+const keys = [
+  {
+    name: 'Wolf-rise',
+    locks: [new Set('WM')]
+  },
+  {
+    name: 'Form-change',
+    locks: [new Set('B'), new Set('W'), new Set('M')]
+  },
+  {
+    name: 'Boots',
+    // G, WM
+    locks: [new Set('G'), new Set(['Wolf-rise'])]
+  },
+  {
+    name: 'Double-jump',
+    // G, WM, L
+    locks: [new Set('L'), new Set(['Boots'])]
+  },
+  {
+    name: 'Horizontal-flight',
+    locks: [new Set('B'), new Set('MP')]
+  },
+  {
+    name: 'Form-boots-chain',
+    // GW, GM, GB
+    locks: [new Set(['G', 'Form-change'])]
+  },
+  {
+    name: 'Boots-chain',
+    // GW, GM, GB, GL
+    locks: [new Set(['Form-boots-chain']), new Set('GL')]
+  },
+  {
+    name: 'Flight',
+    // B, MP, GW, GM, GL
+    locks: [new Set(['Horizontal-flight']), new Set(['Boots-chain'])]
+  },
+  {
+    name: 'Gravity-boots',
+    // B, MP, G, WM
+    locks: [new Set(['Flight']), new Set(['Boots'])]
+  },
+  {
+    name: 'Leap-stone',
+    // B, MP, G, L, WM
+    locks: [new Set(['Gravity-boots']), new Set(['Double-jump'])]
+  },
+  {
+    name: 'Dive-kick',
+    locks: [new Set('L'), new Set(['Form-change'])]
+  },
+  {
+    name: 'Chapel',
+    locks: [new Set(['Dive-kick']), new Set(['Leap-stone']), new Set(['J'])]
+  },
+  {
+    name: 'Spike-breaker-skip',
+    locks: [new Set('')]
+  },
+  {
+    name: 'Spike-breaker',
+    locks: [new Set('JBE'), new Set(['Spike-breaker-skip'])]
+  },
+  {
+    name: 'Silver-ring',
+    locks: [new Set(['Chapel', 'Spike-breaker', 'M', 'J', 'Horizontal-flight'])]
+  },
+  {
+    name: 'Gold-ring',
+    locks: [new Set(['J', 'Horizontal-flight'])]
+  },
+  {
+    name: 'Richter-skip',
+    // I only know bat ver.
+    locks: [new Set('B')]
+  },
+  {
+    name: 'Second-castle',
+    locks: [new Set(['Silver-ring', 'Gold-ring']), new Set(['Richter-skip'])]
+  }
+]
+
 /**
  * List of every relic location, described as follows:
  * location.vanilla - The original relic located at this location.
@@ -205,22 +288,22 @@ const locations = [{
   vanilla: 'Soul of Bat',
   location: 0x00,
   // Mist + at least Leap Stone
-  locks: [new Set('MG'), new Set('ML'), new Set('MP')]
+  locks: [new Set(['M', 'Leap-stone'])]
 }, {
   vanilla: 'Fire of Bat',
   location: 0x01,
   // Flight
-  locks: [new Set('B'), new Set('LG'), new Set('MP')]
+  locks: [new Set(['Flight'])]
 }, {
   vanilla: 'Echo of Bat',
   location: 0x02,
   // Flight + Form Change
-  locks: [new Set('B'), new Set('LGM'), new Set('LGW'), new Set('MP')]
+  locks: [new Set(['Flight', 'Form-change'])]
 }, {
   vanilla: 'Force of Echo',
   location: 0x03,
   // Second Castle
-  locks: [new Set('JMBE')]
+  locks: [new Set(['Second-castle'])]
 }, {
   vanilla: 'Soul of Wolf',
   location: 0x04,
@@ -230,27 +313,27 @@ const locations = [{
   vanilla: 'Power of Wolf',
   location: 0x05,
   // Flight
-  locks: [new Set('B'), new Set('LG'), new Set('MP')]
+  locks: [new Set(['Flight'])]
 }, {
   vanilla: 'Skill of Wolf',
   location: 0x06,
   // Gravity Boots or better
-  locks: [new Set('G'), new Set('B'), new Set('MP')]
+  locks: [new Set(['Gravity-boots'])]
 }, {
   vanilla: 'Form of Mist',
   location: 0x07,
   // At least Leap Stone
-  locks: [new Set('B'), new Set('G'), new Set('L'), new Set('MP')]
+  locks: [new Set(['Leap-stone']), new Set(['Dive-kick'])]
 }, {
   vanilla: 'Power of Mist',
   location: 0x08,
   // Flight
-  locks: [new Set('B'), new Set('LG'), new Set('MP')]
+  locks: [new Set(['Flight'])]
 }, {
   vanilla: 'Gas Cloud',
   location: 0x09,
   // Second Castle
-  locks: [new Set('JMBE')]
+  locks: [new Set(['Second-castle'])]
 }, {
   vanilla: 'Cube of Zoe',
   location: 0x0a,
@@ -265,18 +348,12 @@ const locations = [{
   vanilla: 'Gravity Boots',
   location: 0x0c,
   // Flight
-  locks: [new Set('B'), new Set('LG'), new Set('MP')]
+  locks: [new Set(['Flight'])]
 }, {
   vanilla: 'Leap Stone',
   location: 0x0d,
   // Jewel of Open or at least Leap Stone
-  locks: [
-    new Set('J'),
-    new Set('B'),
-    new Set('G'),
-    new Set('L'),
-    new Set('MP')
-  ]
+  locks: [new Set(['Chapel'])]
 }, {
   vanilla: 'Holy Symbol',
   location: 0x0e,
@@ -301,52 +378,52 @@ const locations = [{
   vanilla: 'Bat Card',
   location: 0x12,
   // Gravity Boots or better
-  locks: [new Set('G'), new Set('B'), new Set('MP')]
+  locks: [new Set(['Gravity-boots'])]
 }, {
   vanilla: 'Ghost Card',
   location: 0x13,
   // Flight
-  locks: [new Set('B'), new Set('LG'), new Set('MP')]
+  locks: [new Set(['Flight'])]
 }, {
   vanilla: 'Faerie Card',
   location: 0x14,
   // Gravity Boots or better
-  locks: [new Set('G'), new Set('B'), new Set('MP')]
+  locks: [new Set(['Gravity-boots']), new Set(['Dive-kick'])]
 }, {
   vanilla: 'Demon Card',
   location: 0x15,
   // Jewel of Open and at least Leap Stone
-  locks: [new Set('JL'), new Set('JG'), new Set('JB'), new Set('JMP')]
+  locks: [new Set(['J', 'Leap-stone'])]
 }, {
   vanilla: 'Sword Card',
   location: 0x16,
   // Flight
-  locks: [new Set('B'), new Set('LG'), new Set('MP')]
+  locks: [new Set(['Flight'])]
 }, {
   vanilla: 'Heart of Vlad',
   location: 0x17,
   // Second Castle
-  locks: [new Set('JMBE')]
+  locks: [new Set(['Second-castle'])]
 }, {
   vanilla: 'Tooth of Vlad',
   location: 0x18,
   // Second Castle
-  locks: [new Set('JMBE')]
+  locks: [new Set(['Second-castle'])]
 }, {
   vanilla: 'Rib of Vlad',
   location: 0x19,
   // Second Castle
-  locks: [new Set('JMBE')]
+  locks: [new Set(['Second-castle'])]
 }, {
   vanilla: 'Ring of Vlad',
   location: 0x1a,
   // Second Castle
-  locks: [new Set('JMBE')]
+  locks: [new Set(['Second-castle'])]
 }, {
   vanilla: 'Eye of Vlad',
   location: 0x1b,
   // Second Castle
-  locks: [new Set('JMBE')]
+  locks: [new Set(['Second-castle'])]
 }]
 
 function relicFromId(id) {
@@ -445,6 +522,25 @@ function replaceLocks(locks, abilityToReplace, locksToAdd) {
   return newLocks
 }
 
+/** Removes locks that are supersets of other locks in the lock list. */
+function reduceLocks(locks) {
+  const newLocks = Array.from(locks)
+  newLocks.sort(function(a, b) {
+    return a.size - b.size
+  })
+  for (let i = 0; i < newLocks.length - 1; i++) {
+    const lock = newLocks[i]
+    for (let j = i + 1; j < newLocks.length; j++) {
+      // If lock i is a subset of lock j, remove j from the list
+      if (isSubset(lock, newLocks[j])) {
+        newLocks.splice(j, 1)
+        j--
+      }
+    }
+  }
+  return newLocks
+}
+
 function pickRelicLocation(ctx, locs) {
   if (ctx.stackDepth++ === 64) {
     throw new Error('soft lock generated')
@@ -503,21 +599,7 @@ function pickRelicLocation(ctx, locs) {
       return !lock.has(relic.ability)
     })
 
-    // Filter out locks that are supersets of other locks
-    newLocks.sort(function(a, b) {
-      return a.size - b.size
-    })
-    for (let i = 0; i < newLocks.length - 1; i++) {
-      const lock = newLocks[i]
-      for (let j = i + 1; j < newLocks.length; j++) {
-        // If lock i is a subset of lock j, remove j from the list
-        if (isSubset(lock, newLocks[j])) {
-          newLocks.splice(j, 1)
-          j--
-        }
-      }
-    }
-    newLoc.locks = newLocks
+    newLoc.locks = reduceLocks(newLocks)
     return newLoc
   })
 
@@ -528,7 +610,7 @@ function pickRelicLocation(ctx, locs) {
   }
 }
 
-function checkForSoftLock(mapping) {
+function checkForSoftLock(mapping, locations) {
   let locs = [ 0x04, 0x0a, 0x0b, 0x0f, 0x10 ]
   const visited = {}
   locs.forEach(function(l) {
@@ -562,6 +644,58 @@ function checkForSoftLock(mapping) {
   if (Object.keys(visited).length !== locations.length) {
     throw new Error('soft lock generated')
   }
+}
+
+let compiledKeys = null
+let compiledLocations = null
+
+function compileKeys() {
+  if (compiledKeys) {
+    return compiledKeys
+  }
+
+  compiledKeys = Array.from(keys)
+
+  for (let i = 0; i < compiledKeys.length; i++) {
+    const key = compiledKeys[i]
+    for (let j = i + 1; j < compiledKeys.length; j++) {
+      let newLocks = replaceLocks(compiledKeys[j].locks, key.name, key.locks)
+
+      // Filter out locks that use this ability
+      newLocks = newLocks.filter(function(lock) {
+        return !lock.has(key.name)
+      })
+
+      compiledKeys[j].locks = reduceLocks(newLocks)
+    }
+  }
+
+  return compiledKeys
+}
+
+function compileLocations() {
+  if (compiledLocations) {
+    return compiledLocations
+  }
+
+  const keys = compileKeys()
+  compiledLocations = Array.from(locations)
+
+  keys.forEach(function(key) {
+    for (let i = 0; i < compiledLocations.length; i++) {
+      let newLocks =
+        replaceLocks(compiledLocations[i].locks, key.name, key.locks)
+
+      // Filter out locks that use this ability
+      newLocks = newLocks.filter(function(lock) {
+        return !lock.has(key.name)
+      })
+
+      compiledLocations[i].locks = reduceLocks(newLocks)
+    }
+  })
+
+  return compiledLocations
 }
 
 function randomizeRelics(data, options) {
@@ -609,7 +743,7 @@ function randomizeRelics(data, options) {
       // Make things always possible later
       // Place the rest of the items
       try {
-        let locs = locations.map(function(loc) {
+        let locs = compileLocations().map(function(loc) {
           return Object.assign({}, loc)
         })
         const mapping = {}
@@ -619,7 +753,7 @@ function randomizeRelics(data, options) {
           mapping[relicLocation.location] = relicLocation
           locs = relicLocation.newLocs
         }
-        checkForSoftLock(mapping)
+        checkForSoftLock(mapping, compileLocations())
         break
       } catch (e) {
         if (e.message !== 'soft lock generated'
