@@ -393,7 +393,9 @@ const locations = [{
   vanilla: 'Demon Card',
   location: 0x15,
   // Jewel of Open and at least Leap Stone
-  locks: [new Set(['J', 'Leap-stone'])]
+  // Update: Forcing Demon card only with Gravity Boots seems unreasonable
+  // JL, JB, JMP, JGM, JGW
+  locks: [new Set(['J', 'L']), new Set(['J', 'Flight'])]
 }, {
   vanilla: 'Sword Card',
   location: 0x16,
