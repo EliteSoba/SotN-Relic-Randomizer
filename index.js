@@ -387,8 +387,9 @@ const locations = [{
 }, {
   vanilla: 'Faerie Card',
   location: 0x14,
-  // Gravity Boots or better
-  locks: [new Set(['Gravity-boots']), new Set(['Dive-kick'])]
+  // Update: Doing this with just mist it too painful
+  // Leap Stone dive kick, Wolf dive kick, or Boots+
+  locks: [new Set(['Leap-stone']), new Set(['W'])]
 }, {
   vanilla: 'Demon Card',
   location: 0x15,
