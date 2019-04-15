@@ -43,151 +43,151 @@ const relics = [{
   name: 'Soul of Bat',
   id: 0x00,
   location: 0x00,
-  addresses: [ 0x47a5b66 ],
+  addresses: [ 0x047a5b66 ],
   ability: 'B',
 }, {
   name: 'Fire of Bat',
   id: 0x01,
   location: 0x01,
-  addresses: [ 0x557535e ],
+  addresses: [ 0x0557535e ],
 }, {
   name: 'Echo of Bat',
   id: 0x02,
   location: 0x02,
-  addresses: [ 0x4aa4156 ],
+  addresses: [ 0x04aa4156 ],
   ability: 'E',
 },  {
   name: 'Force of Echo',
   id: 0x03,
   location: 0x03,
-  addresses: [ 0x526e6a8 ],
+  addresses: [ 0x0526e6a8 ],
 }, {
   name: 'Soul of Wolf',
   id: 0x04,
   location: 0x04,
-  addresses: [ 0x49d6596, 0x49d5d3e ],
+  addresses: [ 0x049d6596, 0x049d5d3e ],
   ability: 'W',
 }, {
   name: 'Power of Wolf',
   id: 0x05,
   location: 0x05,
-  addresses: [ 0x4b6b9b4, 0x53f971c ],
+  addresses: [ 0x04b6b9b4, 0x053f971c ],
 }, {
   name: 'Skill of Wolf',
   id: 0x06,
   location: 0x06,
-  addresses: [ 0x54b1d5a ],
+  addresses: [ 0x054b1d5a ],
 }, {
   name: 'Form of Mist',
   id: 0x07,
   location: 0x07,
-  addresses: [ 0x43c578a ],
+  addresses: [ 0x043c578a ],
   ability: 'M',
 }, {
   name: 'Power of Mist',
   id: 0x08,
   location: 0x08,
-  addresses: [ 0x5610db8, 0x561142c ],
+  addresses: [ 0x05610db8, 0x0561142c ],
   ability: 'P',
 }, {
   name: 'Gas Cloud',
   id: 0x09,
   location: 0x09,
-  addresses: [ 0x4cfcb16 ],
+  addresses: [ 0x04cfcb16 ],
 }, {
   name: 'Cube of Zoe',
   id: 0x0a,
   location: 0x0a,
-  addresses: [ 0x4b6b946, 0x53f969a, 0x4b6b08a, 0x53f8e2e ],
+  addresses: [ 0x04b6b946, 0x053f969a, 0x04b6b08a, 0x053f8e2e ],
 }, {
   name: 'Spirit Orb',
   id: 0x0b,
   location: 0x0b,
-  addresses: [ 0x48fd1fe, 0x48fe280 ],
+  addresses: [ 0x048fd1fe, 0x048fe280 ],
 }, {
   name: 'Gravity Boots',
   id: 0x0c,
   location: 0x0c,
-  addresses: [ 0x48fc9ba ],
+  addresses: [ 0x048fc9ba ],
   ability: 'G',
 }, {
   name: 'Leap Stone',
   id: 0x0d,
   location: 0x0d,
-  addresses: [ 0x5610dc2, 0x561161a ],
+  addresses: [ 0x05610dc2, 0x0561161a ],
   ability: 'L',
 }, {
   name: 'Holy Symbol',
   id: 0x0e,
   location: 0x0e,
-  addresses: [ 0x4c34ee6 ],
+  addresses: [ 0x04c34ee6 ],
 }, {
   name: 'Faerie Scroll',
   id: 0x0f,
   location: 0x0f,
-  addresses: [ 0x47a5720, 0x47a5dd2 ],
+  addresses: [ 0x047a5720, 0x047a5dd2 ],
 }, {
   name: 'Jewel of Open',
   id: 0x10,
   location: 0x10,
-  addresses: [ 0x47a321c ],
+  addresses: [ 0x047a321c ],
   ability: 'J',
 }, {
   name: 'Merman Statue',
   id: 0x11,
   location: 0x11,
-  addresses: [ 0x4c35174 ],
+  addresses: [ 0x04c35174 ],
   ability: 'S',
 }, {
   name: 'Bat Card',
   id: 0x12,
   location: 0x12,
-  addresses: [ 0x54b1d58 ],
+  addresses: [ 0x054b1d58 ],
 }, {
   name: 'Ghost Card',
   id: 0x13,
   location: 0x13,
-  addresses: [ 0x5611958, 0x561127c ],
+  addresses: [ 0x05611958, 0x0561127c ],
 }, {
   name: 'Faerie Card',
   id: 0x14,
   location: 0x14,
-  addresses: [ 0x47a5784 ],
+  addresses: [ 0x047a5784 ],
 }, {
   name: 'Demon Card',
   id: 0x15,
   location: 0x15,
-  addresses: [ 0x45ea95e ],
+  addresses: [ 0x045ea95e ],
 }, {
   name: 'Sword Card',
   id: 0x16,
   location: 0x16,
-  addresses: [ 0x4aa3f76 ],
+  addresses: [ 0x04aa3f76 ],
 }, {
   name: 'Heart of Vlad',
   id: 0x19,
   location: 0x17,
-  addresses: [ 0x67437d2, 0x6306ab2, 0x4e335b4 ],
+  addresses: [ 0x067437d2, 0x06306ab2, 0x04e335b4 ],
 }, {
   name: 'Tooth of Vlad',
   id: 0x1a,
   location: 0x18,
-  addresses: [ 0x5051d52, 0x67d1630 ],
+  addresses: [ 0x05051d52, 0x067d1630 ],
 }, {
   name: 'Rib of Vlad',
   id: 0x1b,
   location: 0x19,
-  addresses: [ 0x69d2b1e, 0x50fa914 ],
+  addresses: [ 0x069d2b1e, 0x050fa914 ],
 }, {
   name: 'Ring of Vlad',
   id: 0x1c,
   location: 0x1a,
-  addresses: [ 0x59bdb30, 0x59ee2e4 ],
+  addresses: [ 0x059bdb30, 0x059ee2e4 ],
 }, {
   name: 'Eye of Vlad',
   id: 0x1d,
   location: 0x1b,
-  addresses: [ 0x4da65f2, 0x662263a ],
+  addresses: [ 0x04da65f2, 0x0662263a ],
 }]
 
 const keys = [
@@ -435,6 +435,12 @@ function relicFromId(id) {
   }).pop()
 }
 
+function relicFromName(name) {
+  return relics.filter(function(relic) {
+    return relic.name === name
+  }).pop()
+}
+
 function addressesFromLocation(location) {
   return relics.filter(function(relic) {
     return relic.location === location
@@ -508,8 +514,7 @@ function replaceLocks(locks, abilityToReplace, locksToAdd) {
     if (!lock.has(abilityToReplace)) {
       // Any locks that didn't require the relic can stay the same
       newLocks.push(lock)
-    }
-    else {
+    } else {
       // Otherwise, remove the old relic as a requirement and instead
       // add all the locks to that relic
       locksToAdd.forEach(function(transferLock) {
@@ -701,98 +706,122 @@ function compileLocations() {
   return compiledLocations
 }
 
-function randomizeRelics(data, options) {
-  // Run a sanity check.
-  if (options.checkVanilla) {
-    const mismatches = []
-    relics.forEach(function(relic) {
-      relic.addresses.forEach(function(address) {
+function randomizeRelics(data, options, info) {
+  let returnVal = true
+  if (options.relicLocations) {
+    // Run a sanity check.
+    if (options.checkVanilla) {
+      const mismatches = []
+      locations.forEach(function(location) {
+        const relic = relics.filter(function(relic) {
+          return relic.location === location.location
+        }).pop()
+        const address = relic.addresses[0]
         if (data[address] !== relic.id) {
           mismatches.push({
-            name: relic.name,
-            id: '0x' + ('0' + relic.id.toString(16)).slice(-2),
-            location: '0x' + ('0' + relic.location.toString(16)).slice(-2),
-            address: '0x' + address.toString(16),
+            relic: relics.filter(function(relic) {
+              return relic.id === data[address]
+            }).pop().name,
+            location: location.vanilla,
           })
         }
       })
-    })
-    if (mismatches.length) {
-      if (options.verbose) {
-        console.error('relic mismatches:')
-        mismatches.forEach(function(relic) {
-          console.error(relic)
-        })
-        console.error('relic data is NOT vanilla')
-      }
-    } else if (options.verbose) {
-      console.log('relic data is vanilla')
-    }
-    return
-  }
-  if (options.relicLocations) {
-    // Doesn't seem like the logic behind selecting relics has been thought
-    // out by the original author, so many times this script will result in
-    // an infinite loop or soft-lock state. To remedy this, just loop the
-    // selection process until it finishes successfully. -mouse
-    while (true) {
-      const ctx = {
-        stackDepth: 0,
-        abilities: {},
-        relics: [],
-        locations: [],
-      }
-      // Do some shuffling things, make sure things arent impossible to access
-      // Make things always possible later
-      // Place the rest of the items
-      try {
-        let locs = compileLocations().map(function(loc) {
-          return Object.assign({}, loc)
-        })
-        const mapping = {}
-        for (let i = 0; i < relics.length; i++) {
-          const relicLocation = pickRelicLocation(ctx, locs)
-          placeRelic(ctx, relicLocation.relic, relicLocation.location, data)
-          mapping[relicLocation.location] = relicLocation
-          locs = relicLocation.newLocs
+      if (mismatches.length) {
+        if (options.verbose) {
+          console.error('relic mismatches:')
+          mismatches.sort(function(a, b) {
+            return relicFromName(a.relic).id - relicFromName(b.relic).id
+          }).forEach(function(relic) {
+            console.error(relic)
+          })
+          console.error('relic data is NOT vanilla')
         }
-        checkForSoftLock(mapping, compileLocations())
-        break
-      } catch (e) {
-        if (e.message !== 'soft lock generated'
-            && e.message !== 'out of available locations') {
-          throw e
+        returnVal = false
+      } else if (options.verbose) {
+        console.log('relic locations are vanilla')
+      }
+    } else {
+      // Doesn't seem like the logic behind selecting relics has been thought
+      // out by the original author, so many times this script will result in
+      // an infinite loop or soft-lock state. To remedy this, just loop the
+      // selection process until it finishes successfully. -mouse
+      while (true) {
+        const ctx = {
+          stackDepth: 0,
+          abilities: {},
+          relics: [],
+          locations: [],
+        }
+        // Do some shuffling things, make sure things arent impossible to
+        // access. Make things always possible later.
+        // Place the rest of the items.
+        try {
+          let locs = compileLocations().map(function(loc) {
+            return Object.assign({}, loc)
+          })
+          const mapping = {}
+          for (let i = 0; i < relics.length; i++) {
+            const relicLocation = pickRelicLocation(ctx, locs)
+            placeRelic(ctx, relicLocation.relic, relicLocation.location, data)
+            mapping[relicLocation.location] = relicLocation
+            locs = relicLocation.newLocs
+          }
+          checkForSoftLock(mapping, compileLocations())
+          const spoilers = []
+          relics.forEach(function(relic) {
+            const location = locations.filter(function(location) {
+              return mapping[location.location].relic.id === relic.id
+            }).pop()
+            spoilers.push(relic.name + ' at ' + location.vanilla)
+          })
+          if (info) {
+            info[3]['Relic locations'] = spoilers
+          }
+          break
+        } catch (e) {
+          if (e.message !== 'soft lock generated'
+              && e.message !== 'out of available locations') {
+            throw e
+          }
         }
       }
+      // Entering the room between jewel door and red door in alchemy lab
+      // triggers a cutscene with Maria. The game will softlock if the player
+      // enters alchemy lab through the red door in chapel before fighting
+      // hippogryph. This can only happen if the player has access to olrox
+      // quarters without soul of bat, which isn't possible in the vanilla game
+      // without a speedrun trick. In a randomized relic run, however, it is
+      // possible to have early movement
+      // options that trigger this softlock for unwitting players. To be safe,
+      // disable the cutscene from ever taking place.
+      // The flag that gets set after the maria cutscene is @ 0x3be71.
+      // The instruction that checks that flag is:
+      // 0x54f0f44:    bne r2, r0, 0x1b8a58    144002da
+      // Change the instruction so it always branches:
+      // 0x54f0f44:    beq r0, r0, 0x1b8a58    100002da
+      data[0x54f0f44 + 2] = 0x00
+      data[0x54f0f44 + 3] = 0x10
+      // Entering the clock room for the first time triggers a cutscene with
+      // Maria. The cutscene takes place in a separately loaded room that does
+      // not connect to the rest of the castle through the statue doors or the
+      // vertical climb to gravity boots. If the player has early movement
+      // options, they may attempt to leave the room through one of these top
+      // exits but find themselves blocked, with the only option being to
+      // reload the room through the left or right exit first. To make it more
+      // convenient and less confusing, disable the cutscene from ever taking
+      // place.
+      // The specific room has a time attack entry that needs to be zero'd out.
+      data[0xaeaa0] = 0x00
+      // The time attack check occurs in Richter mode too, but the game gets
+      // around this by writing the seconds elapsed between pressing Start on
+      // the main screen and on the name entry screen to the time attack table
+      // for events that aren't in Richter mode.
+      // Zero out the time attack entry for the clock room, or Richter will
+      // load the cutscene version every time he enters.
+      data[0x119af4] = 0x00
     }
-    // Entering the room between jewel door and red door in alchemy lab
-    // triggers a cutscene with Maria. The game will softlock if the player
-    // enters alchemy lab through the red door in chapel before fighting
-    // hippogryph. This can only happen if the player has access to olrox
-    // quarters without soul of bat, which isn't possible in the vanilla game
-    // without a speedrun trick. In a randomized relic run, however, it is
-    // possible to have early movement
-    // options that trigger this softlock for unwitting players. To be safe,
-    // disable the cutscene from ever taking place.
-    // The flag that gets set after the maria cutscene is @ 0x3be71.
-    // The instruction that checks that flag is:
-    // 0x54f0f44:    bne r2, r0, 0x1b8a58    144002da
-    // Change the instruction so it always branches:
-    // 0x54f0f44:    beq r0, r0, 0x1b8a58    100002da
-    data[0x54f0f44 + 2] = 0x00
-    data[0x54f0f44 + 3] = 0x10
-    // Entering the clock room for the first time triggers a cutscene with
-    // Maria. The cutscene takes place in a separately loaded room that does
-    // not connect to the rest of the castle through the statue doors or the
-    // vertical climb to gravity boots. If the player has early movement
-    // options, they may attempt to leave the room through one of these top
-    // exits but find themselves blocked, with the only option being to reload
-    // the room through the left or right exit first. To make it more
-    // convenient and less confusing, disable the cutscene from ever taking
-    // place.
-    // The specific room has a time attack entry that needs to be zero'd out.
-    data[0xaeaa0] = 0x00
   }
+  return returnVal
 }
 
 try {
