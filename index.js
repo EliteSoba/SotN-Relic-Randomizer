@@ -264,12 +264,16 @@ const keys = [
   },
   {
     name: 'Richter-skip',
-    // I only know bat ver.
+    // I only want to do bat ver
     locks: [new Set('B')]
   },
   {
     name: 'Second-castle',
-    locks: [new Set(['Silver-ring', 'Gold-ring']), new Set(['Richter-skip'])]
+    // Can't navigate second castle without flight
+    locks: [
+      new Set(['Silver-ring', 'Gold-ring', 'Flight']),
+      new Set(['Richter-skip', 'Flight'])
+    ]
   }
 ]
 
@@ -387,15 +391,12 @@ const locations = [{
 }, {
   vanilla: 'Faerie Card',
   location: 0x14,
-  // Update: Doing this with just mist it too painful
-  // Leap Stone dive kick, Wolf dive kick, or Boots+
+  // Leap Stone dive kick, Wolf dive kick, or Boots+ (Mist too annoying)
   locks: [new Set(['Leap-stone']), new Set(['W'])]
 }, {
   vanilla: 'Demon Card',
   location: 0x15,
-  // Jewel of Open and at least Leap Stone
-  // Update: Forcing Demon card only with Gravity Boots seems unreasonable
-  // JL, JB, JMP, JGM, JGW
+  // Jewel of Open and at least Leap Stone excluding Boots
   locks: [new Set(['J', 'L']), new Set(['J', 'Flight'])]
 }, {
   vanilla: 'Sword Card',
