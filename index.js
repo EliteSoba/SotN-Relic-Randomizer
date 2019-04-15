@@ -654,6 +654,7 @@ function checkForSoftLock(mapping, locations) {
   }
 }
 
+<<<<<<< HEAD
 let compiledKeys = null
 let compiledLocations = null
 
@@ -706,6 +707,8 @@ function compileLocations() {
   return compiledLocations
 }
 
+=======
+>>>>>>> master
 function randomizeRelics(data, options, info) {
   let returnVal = true
   if (options.relicLocations) {
@@ -756,7 +759,11 @@ function randomizeRelics(data, options, info) {
         // access. Make things always possible later.
         // Place the rest of the items.
         try {
+<<<<<<< HEAD
           let locs = compileLocations().map(function(loc) {
+=======
+          let locs = locations.map(function(loc) {
+>>>>>>> master
             return Object.assign({}, loc)
           })
           const mapping = {}
@@ -766,7 +773,11 @@ function randomizeRelics(data, options, info) {
             mapping[relicLocation.location] = relicLocation
             locs = relicLocation.newLocs
           }
+<<<<<<< HEAD
           checkForSoftLock(mapping, compileLocations())
+=======
+          checkForSoftLock(mapping)
+>>>>>>> master
           const spoilers = []
           relics.forEach(function(relic) {
             const location = locations.filter(function(location) {
